@@ -1,0 +1,25 @@
+{
+  "name": "celemod-wayland-native",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "packageManager": "pnpm@10.33.0",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 1420",
+    "build": "tsc && vite build",
+    "preview": "vite preview --host 127.0.0.1 --port 4173",
+    "tauri:dev": "bash ./scripts/tauri.sh dev",
+    "tauri:build": "bash ./scripts/tauri-build.sh",
+    "tauri:build:rpm": "bash ./scripts/tauri.sh build --bundles rpm"
+  },
+  "dependencies": {
+    "@tauri-apps/api": "2.10.1",
+    "preact": "10.29.0"
+  },
+  "devDependencies": {
+    "@preact/preset-vite": "2.10.5",
+    "@tauri-apps/cli": "2.10.1",
+    "typescript": "5.9.3",
+    "vite": "8.0.3"
+  }
+}

@@ -1,4 +1,7 @@
-/target
-cele-mod.db
-mod-cache-*
-translate_script.js
+node_modules/
+dist/
+.vite/
+.pnpm-store/
+.cargo-home/
+src-tauri/target/
+.DS_Store

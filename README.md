@@ -1,49 +1,63 @@
-[English](./README.en.md)
+# CeleMod Wayland Native
 
-<div align=center>
-<img src="src\celemod-ui\src\resources\Celemod.png" />
+CeleMod Wayland Native 是面向 Linux Wayland 桌面的 CeleMod 分支实现，使用 `Tauri v2 + WebKitGTK + Preact/Vite + Rust` 构建。
 
-# CeleMod
+项目目标是保留原 CeleMod 的核心使用路径，同时提供更适合现代 Linux Wayland 环境的窗口栈、打包方式和维护方式。
 
-[Github](https://github.com/MicroCBer/CeleMod/releases/latest) · [蓝奏云 (密码·ok)](https://microblock.lanzouo.com/b0apezvij)
+## 特性
+- Celeste 安装目录探测、校验与自动恢复
+- Everest 版本探测与 `Stable / Beta / Dev` 通道安装
+- 本地 Mod 扫描、卸载、重复分组和依赖分析
+- Blacklist profile 创建、切换、应用与磁盘回灌
+- 在线搜索、URL 安装、推荐安装与依赖补全
+- `Home / Everest / Search / Manage / Multiplayer / Recommend Mods / Recommend Maps` 多页面桌面工作流
+- Wayland 运行时诊断与启动期兼容开关
+- 内置 `zh-CN / en-US`，并支持外部翻译包
 
-An alternative mod manager for Celeste  
- 一个 ⌈ 更好用、更强大 ⌋ 的蔚蓝 Mod 管理器
+## 平台范围
+- 仅支持 Linux
+- 仅面向 Wayland 桌面环境
+- 不维护旧 Sciter UI 主路径
+- 不提供应用内软件自更新
 
-</div>
+## 技术栈
+- Desktop shell: `Tauri v2`
+- Frontend: `Preact + TypeScript + Vite`
+- Backend: `Rust`
+- Package manager: `pnpm`
 
-### 好用
-✅ 常用 Mod 列表，一键安装  
-✅ 国内超快下载（多线程下载，@WEGFan 镜像）  
-✅ 轻量级，启动占用仅 18M  
-✅ 一键解析，补全依赖  
-✅ 一键升级 Mod  
-✅ 按类别搜索，多种排序方式  
-✅ 国服联机 Celeste.Miao.Net 快速配置  
-✅ Everest 镜像一键安装  
-### 强大
-✅ 多个 Mod 配置一键切换  
-✅ 树状 Mod 管理，依赖一目了然  
-✅ 多个 Mod 同时下载，不阻塞  
-✅ 软件内 Mod 详情预览  
-✅ 亚克力 UI  
+## 开发
+```bash
+pnpm install
+pnpm tauri:dev
+```
 
+前端构建：
+```bash
+pnpm build
+```
 
-### 页面展示
-![image](https://github.com/MicroCBer/CeleMod/assets/66859419/a906d8bb-16dc-4018-b370-9a13cec5ade1)
-![image](https://github.com/MicroCBer/CeleMod/assets/66859419/a3592323-c9ea-4ded-9b7c-bf8e23c8f31d)
-![6e14b711c66dd7b36fcb76f71470c272](https://github.com/MicroCBer/CeleMod/assets/66859419/1ee695a5-59a0-4326-8f54-cad2165bba74)
-![9265bfd9eba65e2d05512510a7b15575](https://github.com/MicroCBer/CeleMod/assets/66859419/8c63b169-4b4b-4fc4-998e-1aae48b4275d)
-![a80ca1bb96919629ee69fc237048bdd5](https://github.com/MicroCBer/CeleMod/assets/66859419/ff77be2f-3599-4831-9c38-3703979066b2)
-![f5125abf1462349308bf51ad16e42601](https://github.com/MicroCBer/CeleMod/assets/66859419/40705319-3896-4b17-bb68-51f70560df19)
-![c7501d330b8620839e0f6a77c5b549c3](https://github.com/MicroCBer/CeleMod/assets/66859419/72ba4cb6-e60d-459a-a7f7-f59521dae63b)
+桌面打包：
+```bash
+pnpm tauri:build
+```
 
-### Credits
+如需单独构建指定 bundle：
+```bash
+pnpm tauri:build -- --bundles deb
+pnpm tauri:build -- --bundles appimage
+pnpm tauri:build:rpm -- --debug
+```
 
-[@WEGFan](https://github.com/WEGFan) 提供镜像和社区 API、蔚蓝实现等相关知识
+## 打包说明
+- `pnpm tauri:dev` 和 `pnpm tauri:build` 会自动使用仓库内的 `.cargo-home`
+- `pnpm tauri:build` 默认按 `deb -> appimage` 顺序分开构建
+- AppImage 构建会自动注入 `NO_STRIP=1`
+- 当前稳定发布目标为 `.deb` 与 `.AppImage`
+- `.rpm` 保留为单独验证产物
 
-### 其它
+## 本地化
+自定义翻译包目录和 JSON 格式说明见 [docs/localization.md](docs/localization.md)。
 
-我们使用的 Sciter 版本是 `5.0.2.17`，你可以在这里找到其预构建二进制：
-
-https://gitlab.com/sciter-engine/sciter-js-sdk/-/blob/5.0.2.17/bin/
+## 额外说明
+关于当前 Wayland 原生架构、运行时兼容约束和发布边界，见 [docs/wayland-native-roadmap.md](docs/wayland-native-roadmap.md)。

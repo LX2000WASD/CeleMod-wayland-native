@@ -1,0 +1,36 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1600" y2="900" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0A1431"/>
+      <stop offset="0.55" stop-color="#12365B"/>
+      <stop offset="1" stop-color="#E6F1FF"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1210 180) rotate(126.584) scale(546.279 656.71)">
+      <stop stop-color="#C8EEFF" stop-opacity="0.82"/>
+      <stop offset="1" stop-color="#C8EEFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="snow" x1="240" y1="250" x2="1270" y2="740" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D7F4FF" stop-opacity="0.92"/>
+      <stop offset="1" stop-color="#6CC4FF" stop-opacity="0.2"/>
+    </linearGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#glow)"/>
+  <path d="M0 702C178 638 318 634 420 676C530 721 674 802 850 798C1040 794 1187 657 1353 640C1440 631 1522 646 1600 680V900H0V702Z" fill="#071325"/>
+  <path d="M0 794C148 738 318 736 492 778C669 821 848 860 1056 828C1246 798 1437 706 1600 690V900H0V794Z" fill="#0E2445"/>
+  <path d="M240 662L478 470L702 602L898 410L1136 540L1280 444L1378 518V900H240V662Z" fill="url(#snow)" stroke="rgba(255,255,255,0.45)" stroke-width="8"/>
+  <g fill="#F3FBFF" fill-opacity="0.88">
+    <circle cx="250" cy="166" r="8"/>
+    <circle cx="382" cy="244" r="6"/>
+    <circle cx="514" cy="132" r="5"/>
+    <circle cx="806" cy="118" r="9"/>
+    <circle cx="1018" cy="210" r="7"/>
+    <circle cx="1180" cy="94" r="6"/>
+    <circle cx="1384" cy="198" r="8"/>
+    <circle cx="1282" cy="284" r="5"/>
+  </g>
+  <text x="118" y="128" fill="#F7FBFF" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="34" letter-spacing="0.22em">COLLAB</text>
+  <text x="118" y="308" fill="#F7FBFF" font-family="Noto Serif CJK SC, Source Han Serif SC, serif" font-size="170" font-weight="700">Winter</text>
+  <text x="118" y="462" fill="#D9F2FF" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="72" letter-spacing="0.14em">2021</text>
+  <text x="118" y="590" fill="#C2E6FF" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="40">Snow routes, cold air, long-endurance collab.</text>
+</svg>

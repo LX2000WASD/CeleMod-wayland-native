@@ -1,0 +1,27 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="160" y1="90" x2="1420" y2="860" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#090A12"/>
+      <stop offset="0.48" stop-color="#23103A"/>
+      <stop offset="1" stop-color="#B2472F"/>
+    </linearGradient>
+    <radialGradient id="flare" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1270 170) rotate(145.897) scale(536.316 651.979)">
+      <stop stop-color="#FFB05B" stop-opacity="0.85"/>
+      <stop offset="1" stop-color="#FFB05B" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="900" fill="url(#bg)"/>
+  <rect width="1600" height="900" fill="url(#flare)"/>
+  <g opacity="0.3" stroke="#FFCB8A" stroke-width="10">
+    <path d="M228 212L556 136L790 302L1060 172L1382 254"/>
+    <path d="M188 686L470 548L728 676L996 506L1320 586"/>
+    <path d="M612 84V816"/>
+    <path d="M994 84V816"/>
+  </g>
+  <path d="M948 248L1188 450L934 650L682 450L948 248Z" fill="#FBE9C5" fill-opacity="0.18" stroke="#FFD8A2" stroke-width="14"/>
+  <path d="M948 320L1102 450L948 582L794 450L948 320Z" fill="#FFD18B" fill-opacity="0.18" stroke="#FFD18B" stroke-width="10"/>
+  <text x="118" y="170" fill="#FFE6B9" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="34" letter-spacing="0.18em">STANDALONE MAP</text>
+  <text x="118" y="402" fill="#FFF2D9" font-family="Iosevka, Noto Sans Mono, monospace" font-size="210" font-weight="700">glyph</text>
+  <text x="118" y="524" fill="#FFD8A2" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="54">Dense routing, old-school brutality, precise movement.</text>
+  <text x="118" y="622" fill="#F4C67B" font-family="Noto Sans CJK SC, PingFang SC, sans-serif" font-size="36">A classic high-pressure single map with a sharply etched silhouette.</text>
+</svg>

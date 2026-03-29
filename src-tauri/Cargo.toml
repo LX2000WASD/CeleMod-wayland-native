@@ -1,0 +1,21 @@
+[package]
+name = "celemod-wayland-native"
+version = "0.1.0"
+edition = "2024"
+
+[build-dependencies]
+tauri-build = { version = "2.5.6", features = [] }
+
+[dependencies]
+anyhow = "1.0.100"
+dirs = "6.0.0"
+game-scanner = { git = "https://github.com/EqualGames/game-scanner", branch = "dependabot/cargo/sysinfo-0.28.2" }
+serde = { version = "1.0.228", features = ["derive"] }
+serde_json = "1.0.145"
+serde_yaml = "0.9.34"
+strip_bom = "1.0.0"
+tauri = { version = "2.10.3", features = [] }
+zip = "4.3.0"
+
+[features]
+default = ["tauri/custom-protocol"]
